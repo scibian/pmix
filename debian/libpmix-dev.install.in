@@ -1,0 +1,3 @@
+/usr/include/pmix*	/usr/lib/@TRIPLET@/pmix/include
+#/usr/share/man/*
+./debian/static-build/src/.libs/libpmix.a /usr/lib/@TRIPLET@/pmix/lib

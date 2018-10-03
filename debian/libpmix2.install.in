@@ -1,0 +1,4 @@
+usr/lib/*/libpmix.so.2*	/usr/lib/@TRIPLET@/pmix/lib
+usr/lib/*/pmix		/usr/lib/@TRIPLET@/pmix/lib
+usr/share/pmix
+debian/pmix-mca-params.conf	/usr/lib/@TRIPLET@/pmix/share

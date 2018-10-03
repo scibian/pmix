@@ -1,0 +1,34 @@
+Origin-Bug: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=881952
+Description: Fix for MAXHOSTNAMELEN, MAXPATHLEN not present on Hurd
+Author: Alastair McKinstry <mckinstry@debian.org>
+Forwarded: no
+Last-Updated: 2017-11-25
+
+Index: pmix-3.0.0~rc2/src/mca/base/pmix_mca_base_component_find.c
+===================================================================
+--- pmix-3.0.0~rc2.orig/src/mca/base/pmix_mca_base_component_find.c
++++ pmix-3.0.0~rc2/src/mca/base/pmix_mca_base_component_find.c
+@@ -339,7 +339,7 @@ static int component_find_check (pmix_mc
+         }
+ 
+         if (!found) {
+-            char h[MAXHOSTNAMELEN];
++            char h[PMIX_MAXHOSTNAMELEN];
+             gethostname(h, sizeof(h));
+             pmix_show_help("help-pmix-mca-base.txt",
+                            "find-available:not-valid", true,
+Index: pmix-3.0.0~rc2/src/mca/base/pmix_mca_base_var.c
+===================================================================
+--- pmix-3.0.0~rc2.orig/src/mca/base/pmix_mca_base_var.c
++++ pmix-3.0.0~rc2/src/mca/base/pmix_mca_base_var.c
+@@ -50,6 +50,10 @@
+ #include "src/util/output.h"
+ #include "src/util/pmix_environ.h"
+ 
++#ifndef MAXPATHLEN /* Hurd */
++#define MAXPATHLEN 1024
++#endif
++
+ /*
+  * local variables
+  */

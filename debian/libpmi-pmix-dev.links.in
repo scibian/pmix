@@ -1,0 +1,2 @@
+/usr/lib/@TRIPLET@/pmix/lib/libpmi2.so.1.0.0  /usr/lib/@TRIPLET@/pmix/lib/libpmi2.so
+/usr/lib/@TRIPLET@/pmix/lib/libpmi.so.1.0.0  /usr/lib/@TRIPLET@/pmix/lib/libpmi.so

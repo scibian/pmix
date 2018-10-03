@@ -1,0 +1,2 @@
+libpmi1-pmix binary: package-name-doesnt-match-sonames libpmi1
+libpmi2-pmix binary: package-name-doesnt-match-sonames libpmi2-1

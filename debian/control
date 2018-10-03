@@ -1,0 +1,78 @@
+Source: pmix
+Section: net
+Priority: optional
+Maintainer: Alastair McKinstry <mckinstry@debian.org>
+Build-Depends: debhelper (>= 11), 
+ flex,
+ libpsm-infinipath1-dev [amd64 i386],
+ zlib1g-dev,
+ libevent-dev,
+ libltdl-dev,
+ libmunge-dev [ !hurd-i386] 
+Standards-Version: 4.2.1
+Homepage: https://github.com/pmix/pmix
+Vcs-Browser: https://salsa.debian.org:/science-team/pmix.git
+Vcs-Git: https://salsa.debian.org:/science-team/pmix.git
+
+Package: libpmix-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: ${shlibs:Depends}, ${misc:Depends}, libpmix2 (= ${binary:Version}),
+Description: Development files for the PMI Exascale library  
+ This is the OpenMPI implementation of the Process Management Interface (PMI)
+ Exascale API. PMIx aims to retain transparent compatibility with the existing
+ PMI-1 and PMI-2 definitions, and any future PMI releases; Support 
+ the Instant On initiative for rapid startup of applications at exascale
+ and beyond.
+ 
+Package: libpmi-pmix-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Breaks: libpmix-dev (<< 2.1.0~rc1-2)
+Replaces: libpmix-dev (<< 2.1.0~rc1-2)
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+ libpmi1-pmix (= ${binary:Version}), libpmi2-pmix (= ${binary:Version})
+Description: Development files for the PMI library (OpenMPI )
+ This is the OpenMPI implementation of the Process Management Interface (PMI)
+ Exascale API. PMIx aims to retain transparent compatibility with the existing
+ PMI-1 and PMI-2 definitions, and any future PMI releases; Support 
+ the Instant On initiative for rapid startup of applications at exascale
+ and beyond.
+
+Package: libpmi1-pmix
+Section: libs
+Architecture: any
+Multi-Arch: same
+Breaks: libpmix2 (<< 2.1.0~rc1-2), libpmi-pmix
+Replaces: libpmix2 (<< 2.1.0~rc1-2), libpmi-pmix
+Depends: ${shlibs:Depends}, ${misc:Depends}, libhwloc-plugins
+Description: OpenMPI implementation of the PMI v1 library
+ This is the OpenMPI implementation of the Process Management Interface (PMI)
+ API, v1. 
+
+Package: libpmi2-pmix
+Section: libs
+Architecture: any
+Multi-Arch: same
+Depends: ${shlibs:Depends}, ${misc:Depends}, libhwloc-plugins
+Breaks: libpmix2 (<< 2.1.0~rc1-2)
+Replaces: libpmix2 (<< 2.1.0~rc1-2)
+Description: OpenMPI implementation of the PMI v2 library
+ This is the OpenMPI implementation of the Process Management Interface (PMI)
+ API, v2. 
+
+Package: libpmix2
+Section: libs
+Architecture: any
+Multi-Arch: same
+Breaks: libpmix-dev (<< 2.1.0~rc1-2), libopenmpi3 (<< 3.1.2)
+Replaces: libpmix-dev (<< 2.1.0~rc1-2), libopenmpi3 (<< 3.1.2)
+Depends: ${shlibs:Depends}, ${misc:Depends}, libhwloc-plugins
+Description: Process Management Interface (Exascale) library
+ This is the OpenMPI implementation of the Process Management Interface (PMI)
+ Exascale API. PMIx aims to retain transparent compatibility with the existing
+ PMI-1 and PMI-2 definitions, and any future PMI releases; Support 
+ the Instant On initiative for rapid startup of applications at exascale
+ and beyond.

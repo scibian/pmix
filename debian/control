@@ -2,7 +2,7 @@ Source: pmix
 Section: net
 Priority: optional
 Maintainer: Alastair McKinstry <mckinstry@debian.org>
-Build-Depends: debhelper (>= 11), 
+Build-Depends: debhelper (>= 10), 
  flex,
  libpsm-infinipath1-dev [amd64 i386],
  zlib1g-dev,

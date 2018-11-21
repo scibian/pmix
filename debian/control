@@ -33,7 +33,8 @@ Multi-Arch: same
 Breaks: libpmix-dev (<< 2.1.0~rc1-2)
 Replaces: libpmix-dev (<< 2.1.0~rc1-2)
 Depends: ${shlibs:Depends}, ${misc:Depends}, 
- libpmi1-pmix (= ${binary:Version}), libpmi2-pmix (= ${binary:Version})
+ libpmi1-pmix (= ${binary:Version}), libpmi2-pmix (= ${binary:Version}),
+ libpmix-dev (= ${binary:Version})
 Description: Development files for the PMI library (OpenMPI )
  This is the OpenMPI implementation of the Process Management Interface (PMI)
  Exascale API. PMIx aims to retain transparent compatibility with the existing

@@ -1,3 +1,12 @@
+pmix (3.0.2-2sci9u1) scibian9; urgency=medium
+
+  * Drop compat to 10
+  * Scibianization
+  * libpmi-pmix-dev actually depends on libpmix-dev
+  * Install pmi{1-2} headers along with pmix headers
+
+ -- Rémi Palancher <remi-externe.palancher@edf.fr>  Wed, 21 Nov 2018 10:33:25 +0100
+
 pmix (3.0.2-2) unstable; urgency=medium
 
   * Fix broken symlink (lib version change). Closes: #910158 

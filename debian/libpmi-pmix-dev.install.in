@@ -1,4 +1,4 @@
-/usr/include/pmi.h	/usr/include/@TRIPLET@/pmix/include
-/usr/include/pmi2.h	/usr/include/@TRIPLET@/pmix/include
+/usr/include/pmi.h	/usr/lib/@TRIPLET@/pmix/include
+/usr/include/pmi2.h	/usr/lib/@TRIPLET@/pmix/include
 ./debian/static-build/src/.libs/libpmi.a /usr/lib/@TRIPLET@/pmix/lib
 ./debian/static-build/src/.libs/libpmi2.a /usr/lib/@TRIPLET@/pmix/lib

@@ -4,7 +4,6 @@ Priority: optional
 Maintainer: Scibian Project <packaging@scibian.org>
 Build-Depends: debhelper (>= 9), 
  flex,
- libpsm-infinipath1-dev [amd64 i386],
  zlib1g-dev,
  libevent-dev,
  libltdl-dev,

@@ -1,3 +1,10 @@
+pmix (3.0.2-2sci8u3) scibian8; urgency=medium
+
+  * Update build-dependencies
+  * Fix changelog entries
+
+ -- Mouad Bahi <mouad-externe.bahi@edf.fr>  Wed, 08 Apr 2020 10:27:27 +0200
+
 pmix (3.0.2-2sci8u2) scibian8; urgency=medium
 
   * Add autotools build-dependencies

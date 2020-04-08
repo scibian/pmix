@@ -1,6 +1,7 @@
 pmix (3.0.2-2sci8u2) scibian8; urgency=medium
 
-  * Add autotools dependencies
+  * Add autotools build-dependencies
+  * Drop PSM support
 
  -- Mouad Bahi <mouad-externe.bahi@edf.fr>  Tue, 07 Apr 2020 17:08:50 +0200
 
